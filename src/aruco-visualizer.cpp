@@ -39,13 +39,13 @@ void AVisualizerNode::GrabImage(const sensor_msgs::msg::Image::SharedPtr msgRGB)
   }
   catch (cv_bridge::Exception& e)
   {
-    RCLCPP_INFO(this->get_logger(), "B %s", e.what());
     return;
   }
 
   if(cv_ptrRGB)
   {
     cv::imshow("Detected Aruco", cv_ptrRGB->image);
+    cv::waitKey(10);
   }
 }
 
