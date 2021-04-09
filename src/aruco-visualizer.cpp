@@ -56,7 +56,7 @@ int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
 
-  std::string arucoImgTopic = "/arucoDetector_image";
+  std::string arucoImgTopic = "/arucoDetector/image";
 
   auto nodePtr = std::make_shared<AVisualizerNode>(arucoImgTopic);
 
